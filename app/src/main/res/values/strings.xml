@@ -4,4 +4,6 @@
     <string name="login_pass">Slaptažodis</string>
     <string name="btn_login">Prisijungti</string>
     <string name="btn_register">Registruotis</string>
+    <string name="new_user">Jūsų vartotojo vardas</string>
+    <string name="new_pass">Jūsų slaptažodis</string>
 </resources>
