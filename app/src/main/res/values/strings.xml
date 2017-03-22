@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bitinelis</string>
+    <string name="login_user">Vartotojas</string>
+    <string name="login_pass">Slaptažodis</string>
+    <string name="btn_login">Prisijungti</string>
+    <string name="btn_register">Registruotis</string>
+</resources>
