@@ -20,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent activityChangeIntent = new Intent(LoginActivity.this, MenuActivity.class);
 
                 // currentContext.startActivity(activityChangeIntent);
+                // kazkas naujo
 
                 LoginActivity.this.startActivity(activityChangeIntent);
             }
