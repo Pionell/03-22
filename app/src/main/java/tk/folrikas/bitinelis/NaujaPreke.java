@@ -1,6 +1,7 @@
 package tk.folrikas.bitinelis;
 
-import android.support.v7.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -9,7 +10,7 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NaujaPreke extends AppCompatActivity {
+public class NaujaPreke extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,33 +30,33 @@ public class NaujaPreke extends AppCompatActivity {
 
         final Spinner ind_uzsakymas = (Spinner) findViewById(R.id.ind_uzsakymai);
         List<String> list2 = new ArrayList<String>();
-        list.add("Priimami");
-        list.add("Nepriimami");
+        list2.add("Priimami");
+        list2.add("Nepriimami");
         ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, list);
+                android.R.layout.simple_spinner_item, list2);
         dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ind_uzsakymas.setAdapter(dataAdapter);
+        ind_uzsakymas.setAdapter(dataAdapter2);
 
         final Spinner medaus_rusiss = (Spinner) findViewById(R.id.medaus_rusis);
         List<String> list3 = new ArrayList<String>();
-        list.add("pavasarinis");
-        list.add("miško");
-        list.add("kreminis");
-        list.add("grikių");
-        list.add("aviečių");
+        list3.add("pavasarinis");
+        list3.add("miško");
+        list3.add("kreminis");
+        list3.add("grikių");
+        list3.add("aviečių");
         ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, list);
+                android.R.layout.simple_spinner_item, list3);
         dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        medaus_rusiss.setAdapter(dataAdapter);
+        medaus_rusiss.setAdapter(dataAdapter3);
 
         final Spinner ipakavim_rusiss = (Spinner) findViewById(R.id.ipakavimo_rusis);
         List<String> list4 = new ArrayList<String>();
-        list.add("dovaninis");
-        list.add("paprastas");
+        list4.add("dovaninis");
+        list4.add("paprastas");
         ArrayAdapter<String> dataAdapter4 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, list);
+                android.R.layout.simple_spinner_item, list4);
         dataAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ipakavim_rusiss.setAdapter(dataAdapter);
+        ipakavim_rusiss.setAdapter(dataAdapter4);
     }
 }
-}
+
