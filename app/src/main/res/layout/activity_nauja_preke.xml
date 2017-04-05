@@ -8,5 +8,32 @@
     <Spinner
         android:id="@+id/TipasSelect"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/kiekis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="KIEKIS"/>
+    <Spinner
+        android:id="@+id/ind_uzsakymai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/kaina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="kaina"/>
+    <Spinner
+        android:id="@+id/medaus_rusis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/turis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="tūris litrais"/>
+    <Spinner
+        android:id="@+id/ipakavimo_rusis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
