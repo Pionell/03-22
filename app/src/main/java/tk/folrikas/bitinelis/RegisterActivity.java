@@ -38,8 +38,7 @@ public class RegisterActivity extends Activity {
                 String passwordRepeat = mPasswordRepeat.getText().toString();
                 String email = mNewEmail.getText().toString();
 
-                Toast.makeText(RegisterActivity.this,
-                        username+"\n"+password+"\n"+passwordRepeat+"\n"+email ,Toast.LENGTH_SHORT).show();
+
 
                 boolean cancel = false;
                 View focusView = null;
@@ -66,6 +65,14 @@ public class RegisterActivity extends Activity {
                 if (cancel) {
                     focusView.requestFocus();
                 } else {
+                    Register REG = new Register(username, password, email);
+                        Toast.makeText(RegisterActivity.this,
+                                "objekte: " +
+                                "\nVartotojo vardas: " + REG.getUsername()+
+                                "\nSlaptazodis: " + REG.getPassword()+
+                                "\npasto adresas: " + REG.getEmail(),
+                                Toast.LENGTH_SHORT).show();
+
                     Intent intent = new Intent(RegisterActivity.this, MenuActivity.class);
                     startActivity(intent);
                 }

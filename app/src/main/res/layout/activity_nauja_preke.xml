@@ -13,7 +13,7 @@
         android:id="@+id/kiekis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="KIEKIS"/>
+        android:hint="@string/kiek"/>
     <Spinner
         android:id="@+id/ind_uzsakymai"
         android:layout_width="match_parent"
@@ -22,7 +22,8 @@
         android:id="@+id/kaina"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="kaina"/>
+        android:hint="@string/kaina"/>
+
     <Spinner
         android:id="@+id/medaus_rusis"
         android:layout_width="match_parent"
@@ -31,7 +32,8 @@
         android:id="@+id/turis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="tūris litrais"/>
+        android:hint="@string/turis"/>
+
     <Spinner
         android:id="@+id/ipakavimo_rusis"
         android:layout_width="match_parent"
@@ -42,6 +44,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="pateikti"
-        android:onClick="user_register"
         />
 </LinearLayout>

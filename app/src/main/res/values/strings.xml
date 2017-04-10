@@ -9,6 +9,9 @@
     <string name="error_invalid_password">Neteisingas Slaptažodis</string>
     <string name="error_invalid_email">Neteisingas pašto adresas</string>
     <string name="new_pass">Jūsų slaptažodis</string>
+    <string name="kaina">Kaina</string>
+    <string name="kiek">Kiekis</string>
+    <string name="turis">Tūris</string>
     <string name="new_pass_repeat">Pakartokite slaptažodį</string>
     <string name="new_email">Įveskite pašto adresą</string>
     <string name="error_email_match">slaptažodžiai nevienodi</string>

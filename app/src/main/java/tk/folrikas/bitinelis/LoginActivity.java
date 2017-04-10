@@ -21,14 +21,8 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         Button mygtukas = (Button) findViewById(R.id.prisijungti);
         Button mygtukas3 = (Button) findViewById(R.id.registruotis);
-//--------------------------------------------
-//--------------------------------------------
-//-------------------------------------------
-
         mUsernameView = (EditText) findViewById(R.id.username);
         mPasswordView = (EditText) findViewById(R.id.password);
-
-
 
         mygtukas.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
