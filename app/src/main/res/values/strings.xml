@@ -8,4 +8,6 @@
     <string name="error_invalid_username">Neteisingas vartotojo vardas</string>
     <string name="error_invalid_password">Neteisingas Slaptažodis</string>
     <string name="new_pass">Jūsų slaptažodis</string>
+    <string name="new_pass_repeat">Pakartokite slapražodį</string>
+    <string name="new_email">Įveskite pašto adresą</string>
 </resources>
