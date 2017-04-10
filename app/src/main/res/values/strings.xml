@@ -5,9 +5,12 @@
     <string name="btn_login">Prisijungti</string>
     <string name="btn_register">Registruotis</string>
     <string name="new_user">Jūsų vartotojo vardas</string>
-    <string name="error_invalid_username">Neteisingas vartotojo vardas</string>
+    <string name="error_invalid_username">Netinkamasvartotojo vardas</string>
     <string name="error_invalid_password">Neteisingas Slaptažodis</string>
+    <string name="error_invalid_email">Neteisingas pašto adresas</string>
     <string name="new_pass">Jūsų slaptažodis</string>
-    <string name="new_pass_repeat">Pakartokite slapražodį</string>
+    <string name="new_pass_repeat">Pakartokite slaptažodį</string>
     <string name="new_email">Įveskite pašto adresą</string>
+    <string name="error_email_match">slaptažodžiai nevienodi</string>
+
 </resources>
