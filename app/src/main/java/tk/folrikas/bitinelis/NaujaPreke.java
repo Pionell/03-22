@@ -2,6 +2,8 @@ package tk.folrikas.bitinelis;
 
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,11 +19,10 @@ import java.util.List;
 import static android.text.TextUtils.isEmpty;
 
 public class NaujaPreke extends Activity {
-
     private Spinner TipasSelect, ind_uzsakymas, medaus_rusis, ipakavimo_rusis;
     private Button pateikti;
     private EditText kiekis, kaina, turis;
-
+    private static final String REGISTER_URL = "http://gulp.byethost12.com/mobilus/new_post.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,9 +125,59 @@ public class NaujaPreke extends Activity {
                                     "\nTūris: " + irasas.getTuris()+
                                     "\nĮpakavimo tipas: " + irasas.getIpakavimas(),
                             Toast.LENGTH_SHORT).show();
+                    postToDatabase(irasas);
                 }
             }
         });
     }
+    private void postToDatabase (final NaujaPreke cl){
+        class NewEntry extends AsyncTask<String, Void, String> {
+            ProgressDialog loading;
+            DB database = new DB();
+
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(New_post.this, "Please Wait",null, true, true);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                loading.dismiss();
+                Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            protected String doInBackground(String... params) {
+                // Pirmas string raktas, antras string reiksme
+                HashMap<String, String> data = new HashMap<String,String>();
+                data.put("type",params[0]);
+                data.put("order",params[1]);
+                data.put("gender",params[2]);
+                data.put("price",params[3]);
+                data.put("color",params[4]);
+                data.put("clothes_length",params[5]);
+                data.put("clothes_width",params[6]);
+                data.put("delivery",params[7]);
+
+
+                String result = database.sendPostRequest(REGISTER_URL,data);
+
+                return  result;
+            }
+        }
+
+
+
+        NewEntry ru = new NewEntry();
+        /*ru.execute(type,String.valueOf(order),gender,String.valueOf(price),color,String.valueOf(length),
+                String.valueOf(width),delivery);*/
+        ru.execute(cl.getType(),String.valueOf(cl.getOrder()),cl.getGender(),String.valueOf(cl.getPrice()),cl.getColor(),
+                String.valueOf(cl.getLength()),String.valueOf(cl.getWidth()),cl.getDelivery());
+
+    }
+
 }
 
